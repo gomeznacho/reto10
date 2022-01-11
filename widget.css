@@ -1,0 +1,58 @@
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+}
+
+.widget{
+    top: 200px;
+    position: absolute;
+    display: flex;
+    height: 100px;
+    width: 200px;
+    border-radius: 10%;
+}
+#isengard{
+    background-color: darkgrey;
+    opacity: 1;
+}
+#rivendel{
+    background-color: chartreuse;
+    opacity: 1;
+}
+#rohan{
+    background-color: darkgoldenrod;
+    opacity: 1;
+}
+img{
+    margin: 10px;
+    position: relative;
+    height: 80px;
+    width: 80px;
+}
+.texto{
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    height: fit-content;
+}
+
+h2{
+    margin-top: 10px;
+    margin-left: 10px;
+    position: relative;
+}
+h3{
+    position: relative;
+    margin-left: 30px;
+    bottom: 20px;
+    height: fit-content;
+}
+.menu{
+    left: 50px;
+    top: 320px;
+    margin-right: 75px;
+    position: relative;
+    width: 100px;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="widget.css">
+    <title>Widget Clima</title>
+</head>
+<body>
+    <div class="widget" id="isengard">
+        <div class="texto">
+            <h2>Isengard</h2>
+            <h3>9ºC</h3>
+        </div>
+        <img src="trueno.png" alt="tormenta">
+    </div>
+    <div class="widget" id="rivendel">
+        <div class="texto">
+            <h2>Rivendel</h2>
+            <h3>24ºC</h3>
+        </div>
+        <img src="dom.png" alt="soleado">
+    </div>
+    <div class="widget" id="rohan">
+        <div class="texto">
+            <h2>Rohan</h2>
+            <h3>16ºC</h3>
+        </div>
+        <img src="otono.png" alt="ventoso">
+    </div>
+    <div class="menu">
+        <select id="ciudades" onchange="change()">
+            <option value="1" id="1">Isengard</option>
+            <option value="2" id="2">Rivendel</option>
+            <option value="3" selected id="3">Rohan</option>
+        </select>
+    </div>
+
+    <script>
+        var isengard = document.getElementById("isengard")
+        var rivendel = document.getElementById("rivendel")
+        var rohan = document.getElementById("rohan")
+        
+        function change(){
+            rivendel.style.opacity=1
+            rohan.style.opacity=1
+            isengard.style.opacity=1
+            var ciudades = document.getElementById("ciudades").value
+
+            if(ciudades == 1){
+                goIsen()
+            }
+            else if(ciudades == 2){
+                goRiven()
+            }
+            else if(ciudades == 3){
+                goRoh()
+            }
+        }
+        
+        function goIsen(){
+            rivendel.style.opacity=0
+            rohan.style.opacity=0
+            isengard.style.opacity=1
+            
+        }
+
+        function goRiven(){
+            rohan.style.opacity=0
+            isengard.style.opacity=0
+            rivendel.style.opactiy=1
+        }
+
+        function goRoh(){
+            isengard.style.opactiy=0
+            rivendel.style.opactiy=0
+            rohan.style.opactiy=1
+        }
+    </script>
+</body>
+</html>
